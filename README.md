@@ -26,7 +26,7 @@ Using a panel of **203 prefecture-level (and above) cities** from **2015–2018*
 - **Key regressor**
   - `lnrenewal_lag`: lagged log urban renewal intensity (e.g., project area or investment amount)
 
-### Main empirical findings (high-level)
+### Main empirical findings
 
 1. **Near-zero average effect**
 
@@ -224,9 +224,7 @@ After successful execution, you should obtain:
 
 * `results/fig_coef_hetero.png`
   → Coefficients by low / medium / high long-run renewal-intensity groups with 95% CIs (Figure 3).
-
-These outputs map directly to the tables and figures referenced in the LaTeX manuscript.
-
+  
 ---
 
 ## 6. Mapping Between Code and Paper
