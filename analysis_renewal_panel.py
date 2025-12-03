@@ -26,7 +26,7 @@ YEAR_COL = "year"           # Year
 DEP_VAR = "lhp_deflate"     # Housing price (deflated log)
 TREAT_VAR = "lnrenewal_lag" # Log of renewal intensity (lagged 1 period)
 
-OUT_DIR = "results_new"
+OUT_DIR = "results"
 
 # Font settings (Commented out SimHei as it is for Chinese support; 
 # standard fonts work fine for English)
