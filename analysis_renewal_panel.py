@@ -1,22 +1,8 @@
-# analysis_renewal_panel.py
-# -------------------------------------------------------
-# Using city renewal intensity and housing price panel data, perform:
-# 1) Descriptive statistics
-# 2) Baseline Fixed Effects regression (City FE + Year FE, City-clustered robust SE)
-# 3) Robustness checks: Differenced dependent variable, removing outliers (winsorizing), limiting sample
-# 4) Heterogeneity analysis: Grouped by "High/Middle/Low" renewal intensity
-# 5) Plotting: Annual mean trend + Baseline coefficient confidence interval plot
-#
-# Upon completion, all results will be saved in the ./results/ directory
-# -------------------------------------------------------
-
 import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from linearmodels.panel import PanelOLS
-
-# ======================= Basic Configuration =======================
 
 DATA_PATH = "data/2013-2018renewal_empirical.dta"
 
@@ -32,8 +18,6 @@ OUT_DIR = "results"
 # standard fonts work fine for English)
 # plt.rcParams["font.sans-serif"] = ["SimHei"]
 plt.rcParams["axes.unicode_minus"] = False
-
-# ======================= Helper Functions =======================
 
 def ensure_outdir(path=OUT_DIR):
     if not os.path.exists(path):
@@ -102,9 +86,6 @@ def run_fe_regression(df, dep, treat, controls=None, sample_label="full"):
     }
 
     return result_dict, res
-
-
-# ======================= Main Process =======================
 
 def main():
     ensure_outdir()
